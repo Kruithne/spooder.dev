@@ -1,0 +1,28 @@
+{
+  "name": "spooder.dev",
+  "type": "module",
+  "module": "index.ts",
+  "spooder": {
+    "auto_restart": 0,
+    "run": "bun run index.ts",
+    "update": [
+      "git reset --hard",
+      "git clean -fd",
+      "git pull origin main",
+      "bun install"
+    ],
+    "canary": {
+      "account": "kruithne",
+      "repository": "kruithne/spooder.dev",
+      "crash_console_history": 64,
+      "labels": ["⚠️ canary-report"],
+      "throttle": 86400
+    }
+  },
+  "dependencies": {
+    "spooder": "^3.2.8"
+  },
+  "devDependencies": {
+    "bun-types": "^0.8.1"
+  }
+}

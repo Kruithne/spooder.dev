@@ -1,0 +1,5 @@
+# third party dependencies
+node_modules
+
+# bun lock file
+bun.lockb
