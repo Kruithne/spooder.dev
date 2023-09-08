@@ -18,3 +18,7 @@ server.route('/internal/update', (req: Request, url: URL) => {
 server.route('/test_response_code', (req: Request, url: URL) => {
 	return 418; // i'm a teapot
 });
+
+server.route('/test_text', (req: Request, url: URL) => {
+	return 'hello world';
+});
