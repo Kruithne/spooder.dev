@@ -1,4 +1,4 @@
-import { serve, caution } from 'spooder';
+import { serve, caution, ServerStop } from 'spooder';
 
 const server = serve(3002);
 
@@ -17,4 +17,8 @@ server.route('/internal/update/:key', (req: Request, url: URL) => {
 
 server.route('/test_response_code', (req: Request, url: URL) => {
 	return 418; // I'm a teapot
+});
+
+server.route('/test_uncaught_error', (req: Request, url: URL) => {
+	throw new Error('This is an uncaught error');
 });
