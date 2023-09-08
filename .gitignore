@@ -3,3 +3,6 @@ node_modules
 
 # bun lock file
 bun.lockb
+
+# .env.local file
+.env.local
