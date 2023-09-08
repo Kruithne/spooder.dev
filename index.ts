@@ -16,7 +16,7 @@ server.route('/internal/update/:key', (req: Request, url: URL) => {
 });
 
 server.route('/test_response_code', (req: Request, url: URL) => {
-	return 418; // I'm a teapot
+	return 418; // i'm a teapot
 });
 
 server.route('/test_uncaught_error', (req: Request, url: URL) => {
