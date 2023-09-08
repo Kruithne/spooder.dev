@@ -7,7 +7,7 @@ server.error((err: Error) => {
 	return new Response('The kākāpō has exploded (internal server error)', { status: 500 });
 });
 
-server.route('/internal/update/:key', (req: Request, url: URL) => {
+server.route('/internal/update', (req: Request, url: URL) => {
 	if (url.searchParams.get('key') !== process.env.SPOODER_UPDATE_KEY)
 		return 401; // unauthorized
 
