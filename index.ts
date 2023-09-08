@@ -15,6 +15,10 @@ server.route('/internal/update', (req: Request, url: URL) => {
 	return 200; // ok
 });
 
+server.route('/test_error', (req: Request, url: URL) => {
+	throw new Error('test error');
+});
+
 server.route('/test_response_code', (req: Request, url: URL) => {
 	return 418; // i'm a teapot
 });
