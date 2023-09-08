@@ -18,7 +18,3 @@ server.route('/internal/update', (req: Request, url: URL) => {
 server.route('/test_response_code', (req: Request, url: URL) => {
 	return 418; // i'm a teapot
 });
-
-server.route('/test_uncaught_error', (req: Request, url: URL) => {
-	throw new Error('This is an uncaught error');
-});
